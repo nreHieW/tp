@@ -14,6 +14,7 @@ import static seedu.address.testutil.TypicalPersons.BOB;
 
 import org.junit.jupiter.api.Test;
 
+import seedu.address.model.tag.Tag;
 import seedu.address.testutil.PersonBuilder;
 
 public class PersonTest {
@@ -92,9 +93,11 @@ public class PersonTest {
 
     @Test
     public void toStringMethod() {
-        String expected = Person.class.getCanonicalName() + "{name=" + ALICE.getName() + ", phone=" + ALICE.getPhone()
-                + ", email=" + ALICE.getEmail() + ", address=" + ALICE.getAddress() + ", remark=" + ALICE.getRemark()
-                + ", tags=" + ALICE.getTags() + "}";
+        String expected = ALICE.getName() + " Phone: " + ALICE.getPhone() + " Email: " + ALICE.getEmail()
+                + " Address: " + ALICE.getAddress() + " Remark: " + ALICE.getRemark() + " Tags:";
+        for (Tag tag : ALICE.getTags()) {
+            expected += " " + tag;
+        }
         assertEquals(expected, ALICE.toString());
     }
 }
