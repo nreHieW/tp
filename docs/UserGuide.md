@@ -206,6 +206,7 @@ The fields are:
 - `[t/TAG]` (optional) is the person's new tags.
 
 **Example:**
+
 To edit the person's name to "NewName," their phone number to "98765432," and their email to "newemail@example.com." The person is located at index 1 in the displayed person list of Company 1, and the person is associated with Company 1. Use the following command:
 ```
 edit 1 c/1 n/NewName p/98765432 e/newemail@example.com
